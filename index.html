@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Apps · Portfolio</title>
 <meta name="description" content="Android apps I have designed, built and shipped.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%232F5BFF%22%2F%3E%3Cpath%20d%3D%22M12%2044a20%2020%200%200%201%2040%200z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23000%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20d%3D%22M20%2022l-5-8M44%2022l5-8%22%20stroke%3D%22%23000%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22square%22%2F%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2235%22%20r%3D%223%22%20fill%3D%22%23000%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2235%22%20r%3D%223%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -55,7 +56,8 @@ img{display:block}
 .hero-id{margin-bottom:14px}
 .hero-top{display:grid;grid-template-columns:132px minmax(0,1fr);gap:28px;align-items:center;margin-bottom:24px}
 .hero-top h1{margin:0}
-.avatar{width:100%;aspect-ratio:1;border:var(--bw-lg) solid var(--ink);box-shadow:var(--sh-sm);object-fit:cover;background:var(--blue-tint);display:block}
+.hero-avatar{width:100%;max-width:132px}
+.avatar{width:100%;height:auto;max-width:132px;max-height:132px;aspect-ratio:1/1;border:var(--bw-lg) solid var(--ink);box-shadow:var(--sh-sm);object-fit:cover;background:var(--blue-tint);display:block}
 .avatar-fb{display:grid;place-content:center;justify-items:center;gap:12px;background:var(--blue);color:var(--white);font:900 44px/1 var(--f-sans);font-stretch:115%}
 .avatar-fb small{font:700 13px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.04em}
 .hero h1{margin:0 0 20px;font:900 clamp(52px,9vw,112px)/.9 var(--f-sans);font-stretch:118%;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
@@ -76,7 +78,8 @@ img{display:block}
 /* apps */
 .apps{display:flex;flex-direction:column;gap:44px;margin:0;padding:0;list-style:none}
 .apps--grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,470px),1fr));gap:36px;align-items:start}
-.apps--grid > li.feat-first{grid-column:1/-1}
+.apps--stagger{display:grid;grid-template-columns:repeat(var(--cols,2),minmax(0,1fr));gap:36px;align-items:start}
+.apps--stagger .col{display:flex;flex-direction:column;gap:44px;margin:0;padding:0;list-style:none}
 .app{position:relative;container-type:inline-size;background:var(--white);border:var(--bw) solid var(--ink);box-shadow:var(--sh)}
 .app-in{padding:28px;display:flex;flex-direction:column;gap:20px}
 .app-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center}
@@ -191,7 +194,7 @@ img{display:block}
 @media (max-width:820px){
   .hero{grid-template-columns:1fr;gap:32px;padding-top:16px;padding-bottom:56px}
   .hero-top{grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
-  .hero-avatar{width:88px}
+  .hero-avatar,.avatar{max-width:88px;max-height:88px}
   .avatar{border-width:var(--bw)}
   .avatar-fb{font-size:30px}
   .avatar-fb small{display:none}
@@ -404,7 +407,7 @@ function renderPage(){
   apps.forEach(a=>a.tech.forEach(t=>{ const k=t.toLowerCase(); (stack[k] ||= {t, n:0}).n++; }));
   const stackList = Object.values(stack).sort((a,b)=>b.n-a.n || a.t.localeCompare(b.t));
   const avatar = P.avatar
-    ? `<img class="avatar" src="${esc(P.avatar)}" alt="${esc(name)}" width="320" height="320" data-fb="${esc(initials(name))}" data-fbclass="avatar avatar-fb">`
+    ? `<img class="avatar" src="${esc(P.avatar)}" alt="${esc(name)}" width="132" height="132" data-fb="${esc(initials(name))}" data-fbclass="avatar avatar-fb">`
     : `<div class="avatar avatar-fb" aria-hidden="true">${esc(initials(name))}<small>Add avatar in apps.json</small></div>`;
   const eyebrow = [P.title, P.location].filter(Boolean).map(esc).join(' · ');
   const grid = DATA.featStyle === 'grid';
@@ -427,7 +430,7 @@ function renderPage(){
     </section>
     <section class="wrap" id="apps" aria-labelledby="apps-h">
       <div class="sec-head"><h2 id="apps-h">Shipped apps</h2><span class="mono">${String(apps.length).padStart(2,'0')} total</span></div>
-      ${apps.length ? `<ul class="apps ${grid?'apps--grid feat-grid':'feat-wide'}">${apps.map(appHTML).join('')}</ul>`
+      ${apps.length ? `<div id="apps-list">${appsListHTML()}</div>`
         : `<div class="state" style="margin:0"><div class="state-in"><h1>No apps yet.</h1><p>Add an entry to <code>apps</code> in <code>apps.json</code>.</p></div></div>`}
     </section>
     ${stackList.length?`
@@ -447,6 +450,24 @@ function renderPage(){
   </footer>`;
   wireImages();
 }
+
+const wideMQ = matchMedia('(min-width: 900px)');
+function appsListHTML(){
+  const {apps} = DATA;
+  if(DATA.featStyle !== 'grid') return `<ul class="apps feat-wide">${apps.map(appHTML).join('')}</ul>`;
+  const n = wideMQ.matches && apps.length > 1 ? 2 : 1;
+  const cols = Array.from({length:n}, ()=>({h:0, items:[]}));
+  apps.forEach((a, idx)=>{
+    const w = 2 + (a.shots.length ? 4 : 0) + a.description.length/220 + (a.tech.length ? .5 : 0) + (a.role ? .5 : 0);
+    const c = idx < n ? cols[idx] : cols.reduce((m,c)=>c.h < m.h ? c : m);
+    c.items.push(a); c.h += w;
+  });
+  return `<div class="apps--stagger feat-grid" style="--cols:${n}">${cols.map(c=>`<ul class="col">${c.items.map(appHTML).join('')}</ul>`).join('')}</div>`;
+}
+wideMQ.addEventListener('change', ()=>{
+  const el = document.getElementById('apps-list');
+  if(el && DATA && DATA.featStyle === 'grid'){ el.innerHTML = appsListHTML(); wireImages(); }
+});
 
 /* ---------- images ---------- */
 function wireImages(){

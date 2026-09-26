@@ -1,0 +1,82 @@
+{
+  "profile": {
+    "name": "Toan Thai",
+    "title": "Android Developer",
+    "bio": "I design and build Android apps with Kotlin, Jetpack Compose and Flutter.",
+    "location": "Ho Chi Minh City, Vietnam",
+    "avatar": "avatar.jpg",
+    "links": {
+      "playDeveloper": "",
+      "github": "https://github.com/thaiquoctoanvn",
+      "linkedin": "",
+      "email": ""
+    }
+  },
+  "settings": {
+    "featuredStyle": "grid"
+  },
+  "apps": [
+    {
+      "name": "Qik Font",
+      "featured": true,
+      "packageId": "io.edenx.qikfont",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenx.qikfont",
+      "icon": "https://play-lh.googleusercontent.com/Oc860-yx7X5Xe2PEjpZNFX5tYMC2Tv7gBPVUFB4O4lXs_BHaZFyI_kbbuR5Rj8E3cNPZ=w480-h960-rw",
+      "description": "Unleash the full potential of your creative expression with Qik Font, the definitive app designed for typography lovers and professional designers alike. Dive into the world of fonts, styles, and artistic text with an app that transforms your mobile device into a powerful typography studio.",
+      "tech": [
+        "Android Jetpack Compose"
+      ],
+      "screenshots": [
+        "https://play-lh.googleusercontent.com/9j36OI8s6C1wwxadZBy67k9uZAhHn3di5pu3IE6HvEhSXt6ImjzfCR_xUVx99cPnr30=w5120-h2880-rw",
+        "https://play-lh.googleusercontent.com/-3KVdRpTuzX6ZdCJ3xYje89m18xqSAV1Bt7wo0wIX-6yQQQY-wTCwogKzvXIDTlY3CcL=w5120-h2880-rw",
+        "https://play-lh.googleusercontent.com/51H13JK7sBAii7GPm-LpRp55QzT2-nIHFL2AsAi7ChL8hft2VdPUoBALpCn6XujI=w5120-h2880-rw",
+        "https://play-lh.googleusercontent.com/UPisujR6kd3pKMkGQjp4-TsVWI6pu4xkb8pAOECVNReUTrt80V5KevmlL6gmbue0D9s=w5120-h2880-rw"
+      ]
+    },
+    {
+      "name": "Finger Challenge",
+      "packageId": "io.edenxwhistle.fingerchallenge",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenxwhistle.fingerchallenge",
+      "icon": "https://play-lh.googleusercontent.com/BWjrFPpdqU6_qUkHRq76vqfSachq0Ewq3oQyFJU6GS-JZ6FdHOTWOg8IV6iC95iqwUk=w480-h960-rw",
+      "description": "A mini game to train how your thought control your fingers. Just try it out. You might love it!",
+      "tech": [
+        "Android View",
+        "Kotlin"
+      ],
+      "screenshots": [
+        "https://play-lh.googleusercontent.com/ue7dIGDfzA9YvTSBhQ4dJ3aJWxBYbl1gJenLpBrwe5nJDEsjUhYrEsWRdTxp-3aOSA=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/PwefBIrqJiJUrO85SJvZx-_RI3_S6ZA7LE971W-uPPwYd8zep3yOLpiPZxKnbD450A=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/gkcInlTLV2F95B8cjsS9hoI_Ekjm3on5biDP3o5yc0R7IuOoywidhKgDGpMNDY5YRA=w1052-h592-rw"
+      ]
+    },
+    {
+      "name": "Better Screenshots",
+      "packageId": "io.edenxwhistle.betterscreenshot",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenxwhistle.betterscreenshot",
+      "icon": "https://play-lh.googleusercontent.com/i7VlSwhE6Q0YcRSz1ngZp1XTHUar1d3W0JZoJdqAtto6Z_HGkhDobBHID1d_AlI-1_4=w480-h960-rw",
+      "description": "This app includes a lot of colorful backgrounds for your screenshots. You can also rotate, scale or move your image as you wish",
+      "tech": [
+        "Android Jetpack Compose"
+      ],
+      "screenshots": [
+        "https://play-lh.googleusercontent.com/VfVrOUcnFqme10G6vwOM7ZY1l-eEiktzRz-e-XeXxN_i4HXYTIqZCW-AQd6FNbAeZA=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/7G8WfCz41yK2VNcUoXW639076JuWOB6Zo2oF6ka66JuK1W_Ry-Pb_-jT4B_hVbwPMsI=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/ewMSS2YqDHrYCjgHgjbRBwOwycfIRKqNLoBRqi7aysZkfuQDeKdWDOvjZXhXqdiikA=w1052-h592-rw",
+        "https://play-lh.googleusercontent.com/RhJHTDYcf5KJdp9kUA5QFu6WSu6gbK4ss5QgWjqHCJL1osQqTjHILiRItaTwmrOrVFA=w1052-h592-rw"
+      ]
+    },
+    {
+      "name": "This Website",
+      "icon": "https://i.postimg.cc/gkCw5Z31/exported-image.png",
+      "description": "So excited to tell you this website was developed under Flutter framework.",
+      "tech": [
+        "Flutter",
+        "Firebase Hosting"
+      ],
+      "screenshots": [
+        "https://i.postimg.cc/y6r3m5x1/exported-image-1.png",
+        "https://i.postimg.cc/W4jdpcWn/exported-image-2.png"
+      ]
+    }
+  ]
+}

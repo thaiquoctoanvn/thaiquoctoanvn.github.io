@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apps · Portfolio</title>
+<meta name="description" content="Android apps I have designed, built and shipped.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000;--paper:#FAF7F0;--white:#fff;--blue:#2F5BFF;--blue-tint:#DCE5FF;--line:#E6E0D2;
+  --bw:3px;--bw-lg:4px;
+  --sh-sm:4px 4px 0 var(--ink);--sh:6px 6px 0 var(--ink);--sh-lg:10px 10px 0 var(--ink);
+  --f-sans:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --maxw:1100px;--pad:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--f-sans);-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(0,0,0,.13) 1px,transparent 1.3px);background-size:24px 24px}
+a{color:var(--ink);text-underline-offset:3px}
+a:hover{color:var(--blue)}
+img{display:block}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.is-featured :focus-visible{outline-color:var(--white)}
+.wrap{max-width:calc(var(--maxw) + var(--pad)*2);margin:0 auto;padding:0 var(--pad)}
+.mono{font-family:var(--f-mono);font-size:13px;letter-spacing:.02em;text-transform:uppercase}
+.skip{position:absolute;left:-999px;top:8px;background:var(--white);border:var(--bw) solid var(--ink);padding:8px 12px;z-index:50}
+.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px;border:var(--bw) solid var(--ink);background:var(--white);color:var(--ink);
+  font:800 16px/1 var(--f-sans);font-stretch:108%;text-decoration:none;box-shadow:var(--sh-sm);cursor:pointer;transition:transform .08s ease,box-shadow .08s ease;white-space:nowrap}
+.btn:hover,.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink);color:var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn--primary{background:var(--blue);color:var(--white)}
+.btn--primary:hover,.btn--primary:active{color:var(--white)}
+.btn--icon{width:48px;padding:0;justify-content:center}
+.btn--sm{min-height:40px;padding:0 12px;font-size:14px}
+.btn--sm.btn--icon{width:40px}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:20px}
+.brand{font:800 15px/1 var(--f-mono);text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.top nav{display:flex;gap:20px}
+.top nav a{font:700 15px/1 var(--f-sans);text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-decoration-thickness:3px}
+
+/* hero */
+.hero{display:block;padding-top:40px;padding-bottom:72px}
+.hero-id{margin-bottom:14px}
+.hero-top{display:grid;grid-template-columns:132px minmax(0,1fr);gap:28px;align-items:center;margin-bottom:24px}
+.hero-top h1{margin:0}
+.avatar{width:100%;aspect-ratio:1;border:var(--bw-lg) solid var(--ink);box-shadow:var(--sh-sm);object-fit:cover;background:var(--blue-tint);display:block}
+.avatar-fb{display:grid;place-content:center;justify-items:center;gap:12px;background:var(--blue);color:var(--white);font:900 44px/1 var(--f-sans);font-stretch:115%}
+.avatar-fb small{font:700 13px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.04em}
+.hero h1{margin:0 0 20px;font:900 clamp(52px,9vw,112px)/.9 var(--f-sans);font-stretch:118%;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
+.bio{margin:0 0 28px;font-size:20px;max-width:44ch;text-wrap:pretty}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.stats{margin:0;background:var(--white);border:var(--bw) solid var(--ink);box-shadow:var(--sh)}
+.stats div{padding:18px 22px}
+.stats div+div{border-top:var(--bw) solid var(--ink)}
+.stats dt{order:2}
+.stats div{display:flex;flex-direction:column}
+.stats dd{margin:0;font:900 72px/.95 var(--f-sans);font-stretch:118%;font-variant-numeric:tabular-nums}
+.stats div+div dd{font-size:40px}
+
+/* section heads */
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:var(--bw-lg) solid var(--ink);padding-bottom:12px;margin-bottom:36px}
+.sec-head h2{margin:0;font:900 clamp(34px,5vw,52px)/1 var(--f-sans);font-stretch:115%;text-transform:uppercase;letter-spacing:-.01em}
+
+/* apps */
+.apps{display:flex;flex-direction:column;gap:44px;margin:0;padding:0;list-style:none}
+.apps--grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,470px),1fr));gap:36px;align-items:start}
+.apps--grid > li.feat-first{grid-column:1/-1}
+.app{position:relative;container-type:inline-size;background:var(--white);border:var(--bw) solid var(--ink);box-shadow:var(--sh)}
+.app-in{padding:28px;display:flex;flex-direction:column;gap:20px}
+.app-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center}
+.icon{width:76px;height:76px;border-radius:22%;border:var(--bw) solid var(--ink);object-fit:cover;background:var(--blue-tint);overflow:hidden}
+.icon-fb{display:grid;place-items:center;background:var(--blue);color:var(--white);font:900 26px/1 var(--f-sans);font-stretch:115%}
+.app h3{margin:0;font:900 32px/1.02 var(--f-sans);font-stretch:112%;letter-spacing:-.01em;text-wrap:balance}
+.tagline{margin:6px 0 0;font-size:17px;font-weight:600}
+.chips,.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:0 10px;border:2px solid var(--ink);background:var(--blue-tint);font:700 13px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.02em}
+.tag{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border:2px solid var(--ink);background:var(--white);font:500 13px/1 var(--f-mono)}
+.desc{margin:0;max-width:68ch;text-wrap:pretty}
+.role{margin:0;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.role b{font:700 13px/1.4 var(--f-mono);text-transform:uppercase}
+.meta{display:flex;flex-direction:column;gap:14px}
+
+/* screenshot strip */
+.shots{--h:440px;border-top:var(--bw) solid var(--ink);background:var(--paper);padding:16px 0 0}
+.shots[data-orient="landscape"]{--h:320px}
+.shots-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 28px 12px}
+.shots-nav{display:flex;gap:10px}
+.strip{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 28px;padding:4px 28px 26px;
+  scrollbar-width:thin;scrollbar-color:var(--ink) transparent;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{height:10px}
+.strip::-webkit-scrollbar-thumb{background:var(--ink)}
+.shot{flex:none;scroll-snap-align:start;padding:0;margin:0;border:var(--bw) solid var(--ink);background:var(--blue-tint);box-shadow:var(--sh-sm);cursor:zoom-in;transition:transform .08s ease,box-shadow .08s ease;height:calc(var(--h) + var(--bw)*2)}
+.shot:hover{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.shot img{height:var(--h);width:auto;max-width:none}
+.shot.loading{min-width:calc(var(--h) * .5625)}
+.shots[data-orient="landscape"] .shot.loading{min-width:calc(var(--h) * 1.7778)}
+.shot.loading img{opacity:0}
+.shot-fb{height:var(--h);aspect-ratio:9/16;display:grid;place-content:center;justify-items:center;gap:10px;background:var(--blue-tint);cursor:default}
+.shots[data-orient="landscape"] .shot-fb{aspect-ratio:16/9}
+.shot-fb strong{font:900 44px/1 var(--f-sans);font-stretch:115%}
+
+/* featured: wide */
+.is-featured{box-shadow:var(--sh-lg);border-width:var(--bw-lg)}
+.feat-wide .is-featured{background:var(--blue);color:var(--white)}
+.feat-wide .is-featured .shots{--h:520px;background:#2349E0;border-top-width:var(--bw-lg)}
+.feat-wide .is-featured .shots[data-orient="landscape"]{--h:400px}
+.feat-wide .is-featured .chip,.feat-wide .is-featured .tag{background:var(--white);color:var(--ink)}
+.feat-wide .is-featured .app h3,.feat-wide .is-featured h3{font-size:44px}
+.feat-wide .is-featured .strip{scrollbar-color:var(--white) transparent}
+.feat-wide .is-featured .strip::-webkit-scrollbar-thumb{background:var(--white)}
+.feat-wide .is-featured .btn--primary{background:var(--white);color:var(--ink)}
+.feat-wide .is-featured .shot{box-shadow:4px 4px 0 var(--ink)}
+.sticker{position:absolute;top:-17px;left:22px;z-index:2;background:var(--ink);color:var(--white);border:var(--bw) solid var(--ink);padding:6px 10px;font:700 13px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;transform:rotate(-2deg)}
+/* featured: grid */
+.feat-grid .is-featured{box-shadow:10px 10px 0 var(--blue)}
+.feat-grid .is-featured .sticker{background:var(--blue);border-color:var(--ink)}
+
+@container (max-width:640px){
+  .app-in{padding:22px 20px}
+  .app-head{grid-template-columns:auto minmax(0,1fr)}
+  .app-cta{grid-column:1/-1}
+  .app-cta .btn{width:100%;justify-content:center}
+  .icon{width:64px;height:64px}
+  .app h3,.feat-wide .is-featured h3{font-size:26px}
+  .shots{--h:380px}
+  .shots[data-orient="landscape"]{--h:190px}
+  .feat-wide .is-featured .shots{--h:420px}
+  .feat-wide .is-featured .shots[data-orient="landscape"]{--h:210px}
+  .shots-bar{padding:0 20px 12px}
+  .strip{padding:4px 20px 22px;scroll-padding:0 20px;gap:14px}
+}
+
+/* stack */
+.stack{padding-top:96px}
+.stack-list{display:flex;flex-wrap:wrap;gap:14px;margin:0;padding:0;list-style:none}
+.stack-list li{display:flex;align-items:stretch;border:var(--bw) solid var(--ink);background:var(--white);box-shadow:var(--sh-sm)}
+.stack-list span{padding:12px 16px;font:800 19px/1.1 var(--f-sans);font-stretch:108%}
+.stack-list b{display:grid;place-items:center;min-width:48px;padding:0 10px;border-left:var(--bw) solid var(--ink);background:var(--blue-tint);font:700 14px/1 var(--f-mono)}
+
+/* footer */
+.foot{margin-top:112px;background:var(--ink);color:var(--white);padding:72px 0 28px}
+.foot h2{margin:0 0 16px;font:900 clamp(34px,5vw,60px)/1 var(--f-sans);font-stretch:118%;text-transform:uppercase;letter-spacing:-.02em}
+.foot .mail{display:inline-block;color:var(--white);font:800 clamp(20px,3vw,30px)/1.2 var(--f-sans);text-decoration-thickness:3px;margin-bottom:32px;word-break:break-all}
+.foot .mail:hover{color:var(--blue-tint)}
+.foot .btn{border-color:var(--white);box-shadow:4px 4px 0 var(--white)}
+.foot .btn:hover{box-shadow:0 0 0 var(--white)}
+.foot .btn--primary{border-color:var(--white)}
+.foot :focus-visible{outline-color:var(--white)}
+.foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:64px;padding-top:20px;border-top:2px solid #444;color:#BDBDBD}
+
+/* states */
+.sk{background:#ECE6D8;border:var(--bw) solid var(--ink)}
+@keyframes pulse{50%{opacity:.55}}
+.sk-anim{animation:pulse 1.2s ease-in-out infinite}
+.state{max-width:620px;margin:40px auto 120px;background:var(--white);border:var(--bw-lg) solid var(--ink);box-shadow:var(--sh-lg)}
+.state-bar{background:var(--ink);color:var(--white);padding:10px 16px}
+.state-in{padding:28px}
+.state h1{margin:0 0 10px;font:900 34px/1.05 var(--f-sans);font-stretch:112%}
+.state p{margin:0 0 14px}
+.state code{font:500 14px var(--f-mono);background:var(--blue-tint);border:2px solid var(--ink);padding:1px 6px}
+.state pre{margin:0 0 20px;padding:12px;border:2px solid var(--ink);background:var(--paper);font:500 13px/1.5 var(--f-mono);white-space:pre-wrap;word-break:break-word}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;display:none;grid-template-rows:auto minmax(0,1fr) auto;background:rgba(0,0,0,.92);color:var(--white)}
+.lb.open{display:grid}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px}
+.lb-stage{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:16px;padding:0 20px;min-height:0}
+.lb-fig{margin:0;display:grid;place-items:center;min-height:0;height:100%}
+.lb-fig img{max-width:100%;max-height:calc(100vh - 150px);width:auto;height:auto;border:var(--bw-lg) solid var(--white);background:var(--blue-tint)}
+.lb-bottom{padding:14px 20px 20px;text-align:center}
+.lb .btn{border-color:var(--ink)}
+@media (max-width:640px){
+  .lb-stage{grid-template-columns:1fr;padding:0 12px}
+  .lb-stage .lb-prev,.lb-stage .lb-next{display:none}
+  .lb-bottom{display:flex;justify-content:space-between;align-items:center}
+}
+@media (min-width:641px){.lb-bottom .lb-prev,.lb-bottom .lb-next{display:none}}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-top:16px;padding-bottom:56px}
+  .hero-top{grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+  .hero-avatar{width:88px}
+  .avatar{border-width:var(--bw)}
+  .avatar-fb{font-size:30px}
+  .avatar-fb small{display:none}
+  .bio{font-size:18px}
+}
+@media (max-width:480px){
+  :root{--pad:16px}
+  .top nav{gap:14px}
+  .top nav a{font-size:14px}
+  .actions .btn--primary{flex:1 1 100%;justify-content:center}
+  .apps{gap:36px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#apps">Skip to apps</a>
+<div id="root" aria-live="polite"></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+  <div class="lb-top">
+    <span class="mono" id="lb-title"></span>
+    <button class="btn btn--sm lb-close" type="button" aria-label="Close viewer">Close <kbd class="mono" style="font-size:11px">Esc</kbd></button>
+  </div>
+  <div class="lb-stage">
+    <button class="btn btn--icon lb-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <figure class="lb-fig"><img id="lb-img" alt=""></figure>
+    <button class="btn btn--icon lb-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="lb-bottom">
+    <button class="btn btn--icon lb-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="mono" id="lb-count"></span>
+    <button class="btn btn--icon lb-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
+
+<script>
+(function(){
+const Q = new URLSearchParams(location.search);
+const root = document.getElementById('root');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const I = {
+  play:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .6.7 1 1.2.7l15.9-9.2c.5-.3.5-1 0-1.3L5.2 2.1C4.7 1.8 4 2.2 4 2.8z"/></svg>',
+  gh:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5a10.5 10.5 0 0 0-3.3 20.5c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.5 1.1 3.1.9.1-.7.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 1.9v2.9c0 .3.2.6.7.5A10.5 10.5 0 0 0 12 1.5z"/></svg>',
+  li:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h18v18H3zM6.3 9.6V18h2.6V9.6zm1.3-4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM10.6 9.6V18h2.6v-4.2c0-1.1.2-2.2 1.6-2.2s1.4 1.3 1.4 2.3V18h2.6v-4.7c0-2.3-.5-4-3.2-4-1.3 0-2.1.7-2.5 1.4V9.6z"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M6 18L18 6M9 6h9v9"/></svg>',
+  prev:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  next:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>'
+};
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const initials = s => (String(s||'?').trim().split(/\s+/).slice(0,2).map(w=>w[0]).join('') || '?').toUpperCase();
+function sized(url, p){
+  if(!url) return url;
+  try{ if(new URL(url, location.href).hostname.endsWith('googleusercontent.com')) return url.replace(/=[^\/=]*$/,'') + '=' + p; }catch(e){}
+  return url;
+}
+function parseDl(v){
+  const m = String(v||'').replace(/[, ]/g,'').match(/^([\d.]+)([KMB])?/i);
+  if(!m) return 0;
+  return parseFloat(m[1]) * ({K:1e3,M:1e6,B:1e9}[(m[2]||'').toUpperCase()] || 1);
+}
+function fmtNum(n){
+  if(n>=1e6) return (+(n/1e6).toFixed(1))+'M+';
+  if(n>=1e3) return (+(n/1e3).toFixed(1))+'K+';
+  return String(n);
+}
+
+function normApp(a, i){
+  const t = Array.isArray(a.tech) ? a.tech : Array.isArray(a.techStack) ? a.techStack : typeof (a.tech||a.techStack)==='string' ? (a.tech||a.techStack).split(',') : [];
+  return {
+    i, name: a.name || 'Untitled app',
+    url: a.playStoreUrl || a.url || '',
+    tagline: a.tagline || '', description: a.description || a.descryption || '',
+    category: a.category || '', icon: a.icon || a.thumbnailUrl || '',
+    shots: (a.screenshots || a.projectImageUrls || []).filter(Boolean),
+    tech: t.map(s=>String(s).trim()).filter(Boolean),
+    downloads: a.downloads || '', rating: (a.rating===0||a.rating)?a.rating:'',
+    released: a.released ? String(a.released).slice(0,4) : '', role: a.role || '',
+    featured: !!a.featured
+  };
+}
+function normalize(d){
+  const rawApps = Array.isArray(d) ? d : (d.apps || []);
+  const p = (!Array.isArray(d) && d.profile) || {};
+  const apps = rawApps.map(normApp);
+  if(apps.length && !apps.some(a=>a.featured)) apps[0].featured = true;
+  apps.sort((a,b)=>(b.featured-a.featured) || (a.i-b.i));
+  return {
+    profile:{ name:p.name||'', title:p.title||'', bio:p.bio||'', location:p.location||'', avatar:p.avatar||'', links:p.links||{} },
+    settings:(!Array.isArray(d) && d.settings) || {},
+    apps
+  };
+}
+
+/* ---------- states ---------- */
+function renderLoading(){
+  root.setAttribute('aria-busy','true');
+  root.innerHTML = `
+  <header class="top wrap"><span class="sk sk-anim" style="width:120px;height:18px"></span><span class="sk sk-anim" style="width:180px;height:18px"></span></header>
+  <section class="hero wrap" aria-label="Loading profile">
+    <div>
+      <div class="hero-top"><div class="avatar sk sk-anim" style="box-shadow:none"></div><div><span class="sk sk-anim" style="display:block;width:200px;height:16px;margin-bottom:14px"></span><div class="sk sk-anim" style="height:88px;max-width:620px"></div></div></div>
+      <div class="sk sk-anim" style="height:20px;max-width:420px;margin-bottom:28px"></div>
+      <div class="actions"><span class="sk sk-anim" style="width:220px;height:48px"></span><span class="sk sk-anim" style="width:120px;height:48px"></span></div>
+    </div>
+  </section>
+  <section class="wrap">
+    <p class="mono" style="margin:0 0 16px">Loading apps.json…</p>
+    <ul class="apps">${[0,1].map(()=>`
+      <li><div class="app" style="box-shadow:var(--sh)"><div class="app-in">
+        <div class="app-head"><div class="icon sk sk-anim"></div><div><div class="sk sk-anim" style="height:28px;max-width:260px;margin-bottom:10px"></div><div class="sk sk-anim" style="height:14px;max-width:180px"></div></div></div>
+        <div class="sk sk-anim" style="height:14px;max-width:560px"></div><div class="sk sk-anim" style="height:14px;max-width:480px"></div>
+      </div><div class="shots"><div class="strip">${[0,1,2,3].map(()=>`<div class="sk sk-anim" style="flex:none;width:200px;height:360px"></div>`).join('')}</div></div></div></li>`).join('')}
+    </ul>
+  </section>`;
+}
+function renderError(err){
+  root.removeAttribute('aria-busy');
+  const local = location.protocol === 'file:';
+  root.innerHTML = `
+  <main class="wrap">
+    <div class="state" role="alert">
+      <div class="state-bar mono">Error · apps.json</div>
+      <div class="state-in">
+        <h1>Couldn’t load the app list.</h1>
+        <p>The page reads everything from <code>apps.json</code>, and that file didn’t come through.</p>
+        <pre>${esc(err && err.message || err)}</pre>
+        <p>${local ? 'You opened the page straight from disk. Browsers block that request, so serve the folder over HTTP (GitHub Pages, or <code>npx serve</code> locally).' : 'Check that <code>apps.json</code> sits next to <code>index.html</code> and is valid JSON.'}</p>
+        <div class="actions" style="margin-top:20px"><button class="btn btn--primary" type="button" id="retry">Try again</button></div>
+      </div>
+    </div>
+  </main>`;
+  document.getElementById('retry').onclick = load;
+}
+
+/* ---------- page ---------- */
+let DATA = null;
+function contactButtons(L, primary){
+  const b = [];
+  if(L.playDeveloper) b.push(`<a class="btn ${primary?'btn--primary':''}" href="${esc(L.playDeveloper)}" target="_blank" rel="noopener">${I.play}Google Play developer page</a>`);
+  if(L.github) b.push(`<a class="btn" href="${esc(L.github)}" target="_blank" rel="noopener">${I.gh}GitHub</a>`);
+  if(L.linkedin) b.push(`<a class="btn" href="${esc(L.linkedin)}" target="_blank" rel="noopener">${I.li}LinkedIn</a>`);
+  if(L.email) b.push(`<a class="btn" href="mailto:${esc(L.email)}">${I.mail}Email</a>`);
+  return b.join('');
+}
+function iconHTML(a){
+  const fb = `<div class="icon icon-fb" role="img" aria-label="${esc(a.name)} icon">${esc(initials(a.name))}</div>`;
+  if(!a.icon) return fb;
+  return `<img class="icon" src="${esc(sized(a.icon,'w192-h192'))}" alt="${esc(a.name)} app icon" width="76" height="76" loading="lazy" data-fb="${esc(initials(a.name))}">`;
+}
+function appHTML(a){
+  const chips = [
+    a.category && `<li class="chip">${esc(a.category)}</li>`,
+    a.downloads && `<li class="chip">${esc(a.downloads)} downloads</li>`,
+    a.rating!=='' && `<li class="chip"><span aria-hidden="true">★</span><span class="sr">Rating</span>${esc(Number(a.rating).toFixed(1))}</li>`,
+    a.released && `<li class="chip">${esc(a.released)}</li>`
+  ].filter(Boolean).join('');
+  const isPlay = /play\.google\.com/.test(a.url);
+  const cta = a.url ? `<div class="app-cta"><a class="btn btn--primary" href="${esc(a.url)}" target="_blank" rel="noopener">${isPlay?I.play+'View on Google Play':'Visit'+I.arrow}<span class="sr"> (${esc(a.name)})</span></a></div>` : '';
+  const n = a.shots.length;
+  const shots = n ? `
+    <div class="shots" data-app="${a.i}">
+      <div class="shots-bar">
+        <span class="mono">Screens · ${n}</span>
+        ${n>1?`<div class="shots-nav"><button class="btn btn--sm btn--icon" type="button" data-scroll="-1" aria-label="Scroll ${esc(a.name)} screenshots left">${I.prev}</button><button class="btn btn--sm btn--icon" type="button" data-scroll="1" aria-label="Scroll ${esc(a.name)} screenshots right">${I.next}</button></div>`:''}
+      </div>
+      <div class="strip" tabindex="0" role="region" aria-label="${esc(a.name)} screenshots">
+        ${a.shots.map((s,k)=>`<button class="shot loading" type="button" data-app="${a.i}" data-k="${k}" aria-label="Open ${esc(a.name)} screenshot ${k+1} of ${n}"><img src="${esc(sized(s,'w1600-h1000'))}" alt="${esc(a.name)} screenshot ${k+1} of ${n}" loading="${k<3?'eager':'lazy'}" decoding="async"></button>`).join('')}
+      </div>
+    </div>` : '';
+  return `
+  <li class="${a.featured && DATA.featStyle==='grid' && false ? 'feat-first':''}">
+    <article class="app ${a.featured?'is-featured':''}" id="app-${a.i}" aria-labelledby="t-${a.i}">
+      ${a.featured?'<span class="sticker">Featured</span>':''}
+      <div class="app-in">
+        <div class="app-head">
+          ${iconHTML(a)}
+          <div><h3 id="t-${a.i}">${esc(a.name)}</h3>${a.tagline?`<p class="tagline">${esc(a.tagline)}</p>`:''}</div>
+          ${cta}
+        </div>
+        ${chips?`<ul class="chips" aria-label="Details">${chips}</ul>`:''}
+        <div class="meta">
+          ${a.description?`<p class="desc">${esc(a.description)}</p>`:''}
+          ${a.role?`<p class="role"><b>My role</b><span>${esc(a.role)}</span></p>`:''}
+          ${a.tech.length?`<ul class="tags" aria-label="Tech">${a.tech.map(t=>`<li class="tag">${esc(t)}</li>`).join('')}</ul>`:''}
+        </div>
+      </div>
+      ${shots}
+    </article>
+  </li>`;
+}
+function renderPage(){
+  root.removeAttribute('aria-busy');
+  const {profile:P, apps} = DATA;
+  const L = P.links || {};
+  const name = P.name || 'Portfolio';
+  document.title = `${name} · Apps`;
+  const onPlay = apps.filter(a=>/play\.google\.com/.test(a.url)).length;
+  const dl = apps.reduce((s,a)=>s+parseDl(a.downloads),0);
+  const stats = [[String(apps.length).padStart(2,'0'), apps.length===1?'App shipped':'Apps shipped']];
+  if(dl) stats.push([fmtNum(dl), 'Total downloads']);
+  else if(onPlay) stats.push([String(onPlay).padStart(2,'0'), 'Live on Google Play']);
+  const stack = {};
+  apps.forEach(a=>a.tech.forEach(t=>{ const k=t.toLowerCase(); (stack[k] ||= {t, n:0}).n++; }));
+  const stackList = Object.values(stack).sort((a,b)=>b.n-a.n || a.t.localeCompare(b.t));
+  const avatar = P.avatar
+    ? `<img class="avatar" src="${esc(P.avatar)}" alt="${esc(name)}" width="320" height="320" data-fb="${esc(initials(name))}" data-fbclass="avatar avatar-fb">`
+    : `<div class="avatar avatar-fb" aria-hidden="true">${esc(initials(name))}<small>Add avatar in apps.json</small></div>`;
+  const eyebrow = [P.title, P.location].filter(Boolean).map(esc).join(' · ');
+  const grid = DATA.featStyle === 'grid';
+
+  root.innerHTML = `
+  <header class="top wrap">
+    <a class="brand" href="#top">${esc(name)}</a>
+    <nav aria-label="Sections"><a href="#apps">Apps</a>${stackList.length?'<a href="#stack">Stack</a>':''}<a href="#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="top">
+      <div>
+        <div class="hero-top">
+          <div class="hero-avatar">${avatar}</div>
+          <div>${eyebrow?`<div class="hero-id"><p class="mono" style="margin:0">${eyebrow}</p></div>`:''}<h1>${esc(name)}</h1></div>
+        </div>
+        ${P.bio?`<p class="bio">${esc(P.bio)}</p>`:''}
+        <div class="actions">${contactButtons(L, true)}</div>
+      </div>
+    </section>
+    <section class="wrap" id="apps" aria-labelledby="apps-h">
+      <div class="sec-head"><h2 id="apps-h">Shipped apps</h2><span class="mono">${String(apps.length).padStart(2,'0')} total</span></div>
+      ${apps.length ? `<ul class="apps ${grid?'apps--grid feat-grid':'feat-wide'}">${apps.map(appHTML).join('')}</ul>`
+        : `<div class="state" style="margin:0"><div class="state-in"><h1>No apps yet.</h1><p>Add an entry to <code>apps</code> in <code>apps.json</code>.</p></div></div>`}
+    </section>
+    ${stackList.length?`
+    <section class="wrap stack" id="stack" aria-labelledby="stack-h">
+      <div class="sec-head"><h2 id="stack-h">Stack</h2><span class="mono">Across all apps</span></div>
+      <ul class="stack-list">${stackList.map(s=>`<li><span>${esc(s.t)}</span><b aria-label="used in ${s.n} ${s.n===1?'app':'apps'}">×${s.n}</b></li>`).join('')}</ul>
+    </section>`:''}
+  </main>
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <p class="mono" style="margin:0 0 16px;color:#BDBDBD">Contact</p>
+      <h2>Say hi!</h2>
+      ${L.email?`<a class="mail" href="mailto:${esc(L.email)}">${esc(L.email)}</a>`:''}
+      <div class="actions">${contactButtons(L, true)}</div>
+      <div class="foot-base mono"><span>© ${new Date().getFullYear()} ${esc(name)}</span></div>
+    </div>
+  </footer>`;
+  wireImages();
+}
+
+/* ---------- images ---------- */
+function wireImages(){
+  root.querySelectorAll('img[data-fb]').forEach(img=>{
+    const fail = ()=>{
+      const d = document.createElement('div');
+      d.className = img.dataset.fbclass || 'icon icon-fb';
+      d.setAttribute('role','img'); d.setAttribute('aria-label', img.alt);
+      d.textContent = img.dataset.fb;
+      img.replaceWith(d);
+    };
+    if(img.complete && img.naturalWidth===0) fail(); else img.addEventListener('error', fail, {once:true});
+  });
+  root.querySelectorAll('.shot img').forEach(img=>{
+    const btn = img.parentElement, strip = btn.closest('.shots');
+    const ok = ()=>{
+      btn.classList.remove('loading');
+      if(!strip.dataset.orient) strip.dataset.orient = img.naturalWidth > img.naturalHeight ? 'landscape' : 'portrait';
+    };
+    const fail = ()=>{
+      const a = DATA.apps.find(x=>x.i==btn.dataset.app);
+      const d = document.createElement('div');
+      d.className = 'shot shot-fb';
+      d.setAttribute('role','img'); d.setAttribute('aria-label', img.alt + ' (unavailable)');
+      d.innerHTML = `<strong>${esc(initials(a && a.name))}</strong><span class="mono">Image unavailable</span>`;
+      btn.replaceWith(d);
+    };
+    if(img.complete){ img.naturalWidth ? ok() : fail(); }
+    else { img.addEventListener('load', ok, {once:true}); img.addEventListener('error', fail, {once:true}); }
+  });
+}
+
+/* ---------- interactions ---------- */
+root.addEventListener('click', e=>{
+  const sc = e.target.closest('[data-scroll]');
+  if(sc){
+    const strip = sc.closest('.shots').querySelector('.strip');
+    strip.scrollBy({left: sc.dataset.scroll * strip.clientWidth * .8, behavior: reduce?'auto':'smooth'});
+    return;
+  }
+  const shot = e.target.closest('button.shot');
+  if(shot) openLb(+shot.dataset.app, +shot.dataset.k, shot);
+});
+
+const lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img');
+let cur = null, lastFocus = null;
+function lbShow(){
+  const a = DATA.apps.find(x=>x.i===cur.app), n = a.shots.length;
+  lbImg.src = sized(a.shots[cur.k], 'w2400-h2400');
+  lbImg.alt = `${a.name} screenshot ${cur.k+1} of ${n}`;
+  document.getElementById('lb-title').textContent = a.name;
+  document.getElementById('lb-count').textContent = `${cur.k+1} / ${n}`;
+  lb.querySelectorAll('.lb-prev,.lb-next').forEach(b=>b.style.visibility = n>1 ? 'visible':'hidden');
+}
+function openLb(app, k, from){
+  cur = {app, k}; lastFocus = from || document.activeElement;
+  lb.hidden = false; lb.classList.add('open'); document.body.style.overflow='hidden';
+  lbShow(); lb.querySelector('.lb-close').focus();
+}
+function closeLb(){
+  lb.classList.remove('open'); lb.hidden = true; document.body.style.overflow=''; lbImg.removeAttribute('src');
+  if(lastFocus && lastFocus.focus) lastFocus.focus();
+}
+function step(d){
+  const n = DATA.apps.find(x=>x.i===cur.app).shots.length;
+  cur.k = (cur.k + d + n) % n; lbShow();
+}
+lb.addEventListener('click', e=>{
+  if(e.target.closest('.lb-close')) return closeLb();
+  if(e.target.closest('.lb-prev')) return step(-1);
+  if(e.target.closest('.lb-next')) return step(1);
+  if(!e.target.closest('img,button')) closeLb();
+});
+document.addEventListener('keydown', e=>{
+  if(!lb.classList.contains('open')) return;
+  if(e.key==='Escape') closeLb();
+  else if(e.key==='ArrowLeft') step(-1);
+  else if(e.key==='ArrowRight') step(1);
+  else if(e.key==='Tab'){
+    const f = [...lb.querySelectorAll('button')].filter(b=>b.offsetParent && b.style.visibility!=='hidden');
+    const i = f.indexOf(document.activeElement);
+    if(e.shiftKey && i<=0){ e.preventDefault(); f[f.length-1].focus(); }
+    else if(!e.shiftKey && i===f.length-1){ e.preventDefault(); f[0].focus(); }
+  }
+});
+let tx = null;
+lb.addEventListener('touchstart', e=>{ tx = e.touches[0].clientX; }, {passive:true});
+lb.addEventListener('touchend', e=>{ if(tx===null) return; const dx = e.changedTouches[0].clientX - tx; if(Math.abs(dx)>50) step(dx<0?1:-1); tx=null; });
+
+/* ---------- load ---------- */
+function load(){
+  renderLoading();
+  const state = Q.get('state');
+  if(state === 'loading') return;
+  const src = state === 'error' ? 'apps.missing.json' : (Q.get('data') || 'apps.json');
+  fetch(src, {cache:'no-cache'})
+    .then(r=>{ if(!r.ok) throw new Error(`GET ${src} → ${r.status} ${r.statusText||''}`.trim()); return r.json(); })
+    .then(d=>{
+      DATA = normalize(d);
+      DATA.featStyle = Q.get('featured') || DATA.settings.featuredStyle || 'wide';
+      renderPage();
+      const lbq = Q.get('lightbox');
+      if(lbq){ const [ai,k] = lbq.split('-').map(Number); const a = DATA.apps[ai]; if(a && a.shots[k]) openLb(a.i, k); }
+    })
+    .catch(renderError);
+}
+load();
+})();
+</script>
+</body>
+</html>

@@ -1,79 +1,81 @@
 {
-  "profile": {
-    "name": "Toan Thai",
-    "title": "Android Developer",
-    "bio": "I design and build Android apps with Kotlin, Jetpack Compose and Flutter.",
-    "location": "Ho Chi Minh City, Vietnam",
-    "avatar": "avatar.jpg",
-    "links": {
-      "playDeveloper": "https://play.google.com/store/apps/dev?id=5665599142697779691",
-      "github": "https://github.com/thaiquoctoanvn",
-      "linkedin": "https://www.linkedin.com/in/toanthai/",
-      "email": "toanthai.me@gmail.com"
-    }
-  },
-  "apps": [
-    {
-      "name": "Qik Font",
-      "featured": true,
-      "packageId": "io.edenx.qikfont",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenx.qikfont",
-      "icon": "https://play-lh.googleusercontent.com/Oc860-yx7X5Xe2PEjpZNFX5tYMC2Tv7gBPVUFB4O4lXs_BHaZFyI_kbbuR5Rj8E3cNPZ=w480-h960-rw",
-      "description": "Unleash the full potential of your creative expression with Qik Font, the definitive app designed for typography lovers and professional designers alike. Dive into the world of fonts, styles, and artistic text with an app that transforms your mobile device into a powerful typography studio.",
-      "tech": [
-        "Android Jetpack Compose"
-      ],
-      "screenshots": [
-        "https://play-lh.googleusercontent.com/9j36OI8s6C1wwxadZBy67k9uZAhHn3di5pu3IE6HvEhSXt6ImjzfCR_xUVx99cPnr30=w5120-h2880-rw",
-        "https://play-lh.googleusercontent.com/-3KVdRpTuzX6ZdCJ3xYje89m18xqSAV1Bt7wo0wIX-6yQQQY-wTCwogKzvXIDTlY3CcL=w5120-h2880-rw",
-        "https://play-lh.googleusercontent.com/51H13JK7sBAii7GPm-LpRp55QzT2-nIHFL2AsAi7ChL8hft2VdPUoBALpCn6XujI=w5120-h2880-rw",
-        "https://play-lh.googleusercontent.com/UPisujR6kd3pKMkGQjp4-TsVWI6pu4xkb8pAOECVNReUTrt80V5KevmlL6gmbue0D9s=w5120-h2880-rw"
-      ]
+    "profile": {
+        "name": "Toan Thai",
+        "title": "Android Developer",
+        "bio": "Android Developer with ~5 years of experience building and maintaining native apps in Kotlin and Java. Focused on Jetpack Compose, Clean Architecture, Coroutines/Flow and offline-first design, with AI tools in my daily workflow.",
+        "location": "Ho Chi Minh City, Vietnam",
+        "avatar": "avatar.jpg",
+        "links": {
+            "playDeveloper": "https://play.google.com/store/apps/dev?id=5665599142697779691",
+            "github": "https://github.com/thaiquoctoanvn",
+            "linkedin": "https://www.linkedin.com/in/toanthai/",
+            "email": "toanthai.me@gmail.com"
+        }
     },
-    {
-      "name": "Finger Challenge",
-      "packageId": "io.edenxwhistle.fingerchallenge",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenxwhistle.fingerchallenge",
-      "icon": "https://play-lh.googleusercontent.com/BWjrFPpdqU6_qUkHRq76vqfSachq0Ewq3oQyFJU6GS-JZ6FdHOTWOg8IV6iC95iqwUk=w480-h960-rw",
-      "description": "A mini game to train how your thought control your fingers. Just try it out. You might love it!",
-      "tech": [
-        "Android View",
-        "Kotlin"
-      ],
-      "screenshots": [
-        "https://play-lh.googleusercontent.com/ue7dIGDfzA9YvTSBhQ4dJ3aJWxBYbl1gJenLpBrwe5nJDEsjUhYrEsWRdTxp-3aOSA=w1052-h592-rw",
-        "https://play-lh.googleusercontent.com/PwefBIrqJiJUrO85SJvZx-_RI3_S6ZA7LE971W-uPPwYd8zep3yOLpiPZxKnbD450A=w1052-h592-rw",
-        "https://play-lh.googleusercontent.com/gkcInlTLV2F95B8cjsS9hoI_Ekjm3on5biDP3o5yc0R7IuOoywidhKgDGpMNDY5YRA=w1052-h592-rw"
-      ]
-    },
-    {
-      "name": "Better Screenshots",
-      "packageId": "io.edenxwhistle.betterscreenshot",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenxwhistle.betterscreenshot",
-      "icon": "https://play-lh.googleusercontent.com/i7VlSwhE6Q0YcRSz1ngZp1XTHUar1d3W0JZoJdqAtto6Z_HGkhDobBHID1d_AlI-1_4=w480-h960-rw",
-      "description": "This app includes a lot of colorful backgrounds for your screenshots. You can also rotate, scale or move your image as you wish",
-      "tech": [
-        "Android Jetpack Compose"
-      ],
-      "screenshots": [
-        "https://play-lh.googleusercontent.com/VfVrOUcnFqme10G6vwOM7ZY1l-eEiktzRz-e-XeXxN_i4HXYTIqZCW-AQd6FNbAeZA=w1052-h592-rw",
-        "https://play-lh.googleusercontent.com/7G8WfCz41yK2VNcUoXW639076JuWOB6Zo2oF6ka66JuK1W_Ry-Pb_-jT4B_hVbwPMsI=w1052-h592-rw",
-        "https://play-lh.googleusercontent.com/ewMSS2YqDHrYCjgHgjbRBwOwycfIRKqNLoBRqi7aysZkfuQDeKdWDOvjZXhXqdiikA=w1052-h592-rw",
-        "https://play-lh.googleusercontent.com/RhJHTDYcf5KJdp9kUA5QFu6WSu6gbK4ss5QgWjqHCJL1osQqTjHILiRItaTwmrOrVFA=w1052-h592-rw"
-      ]
-    },
-    {
-      "name": "This Website",
-      "icon": "https://i.postimg.cc/gkCw5Z31/exported-image.png",
-      "description": "So excited to tell you this website was developed under Flutter framework.",
-      "tech": [
-        "Flutter",
-        "Firebase Hosting"
-      ],
-      "screenshots": [
-        "https://i.postimg.cc/y6r3m5x1/exported-image-1.png",
-        "https://i.postimg.cc/W4jdpcWn/exported-image-2.png"
-      ]
-    }
-  ]
+    "apps": [
+        {
+            "name": "Qik Font",
+            "featured": true,
+            "packageId": "io.edenx.qikfont",
+            "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenx.qikfont",
+            "icon": "https://play-lh.googleusercontent.com/zwfEpresftzz3PlX4nawK6IoDwK3kaNCkthkUqK5BrzRC5CICcYmunCws5gp9ctjQDGgfEAc7GbskBbnqjqOKw=w480-h960-rw",
+            "description": "Unleash the full potential of your creative expression with Qik Font, the definitive app designed for typography lovers and professional designers alike. Dive into the world of fonts, styles, and artistic text with an app that transforms your mobile device into a powerful typography studio.",
+            "tech": [
+                "Jetpack Compose",
+                "Room",
+                "Kotlin Flow",
+                "Hilt",
+                "Navigation Compose",
+                "MVVM"
+            ],
+            "screenshots": [
+                "https://play-lh.googleusercontent.com/F26VU_pvV44-jR3x-Y8tp-RF2pad8dNayRmNBInkRpZvSbK6Xa2HwaKBaLtT1mj_sgdi2wqRPNRG6LdyVTMlLhM=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/E7NMPWeysHUY5A8bNtpR-HgbF5-8owKKT7FB-sYLXnAXKyF9JCDhLtb65Hp25jiXFGAfq62HG2jQ5Nt0NHezXEo=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/k7-LW2Deb209KVkoZ2ZK0Kx3Ki26i4ln56eOOwJrIOU4mns8Tlye3o4aMwJgAfRHK8OiuL1PymvWV5LgtiLJbjM=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/wx3cwTrh1NPznFsQhOkLL2B9XE9plNiKM8wbluvIjUM9IglvG1e7L-_mSaJI9eJqXVELTBVq6rq7wTcWC84Czw=w5120-h2880-rw"
+            ]
+        },
+        {
+            "name": "Color Battle",
+            "packageId": "io.edenxwhistle.fingerchallenge",
+            "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenxwhistle.fingerchallenge",
+            "icon": "https://play-lh.googleusercontent.com/nny8UPjtNtaRvwAo4T0ZE-OSYKqzA-IKwpEcEBcjY1caYo6B8IAKjTSPdCxZw-21Zy-_I7q39Na6e9qTwHfwGg=w480-h960-rw",
+            "description": "A mini game to train how your thought control your fingers. Just try it out. You might love it!",
+            "tech": [
+                "Jetpack Compose",
+                "Coroutines",
+                "Navigation 3",
+                "Hilt",
+                "Google Mobile Ads",
+                "MVI"
+            ],
+            "screenshots": [
+                "https://play-lh.googleusercontent.com/ue7dIGDfzA9YvTSBhQ4dJ3aJWxBYbl1gJenLpBrwe5nJDEsjUhYrEsWRdTxp-3aOSA=w1052-h592-rw",
+                "https://play-lh.googleusercontent.com/PwefBIrqJiJUrO85SJvZx-_RI3_S6ZA7LE971W-uPPwYd8zep3yOLpiPZxKnbD450A=w1052-h592-rw",
+                "https://play-lh.googleusercontent.com/gkcInlTLV2F95B8cjsS9hoI_Ekjm3on5biDP3o5yc0R7IuOoywidhKgDGpMNDY5YRA=w1052-h592-rw"
+            ]
+        },
+        {
+            "name": "Lockit",
+            "packageId": "io.edenx.applock",
+            "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenx.applock",
+            "icon": "https://play-lh.googleusercontent.com/c-AMBdWFw1KzyTRiVyjtQ8B3xHLTC4ncN3n2A4HTWl0qu3hP98MYFrfqPj6RpVE4s1q9hg5TSDnuV_Z6Dd6k=w480-h960-rw",
+            "description": "Protect your privacy and keep your apps secure with Lockit.\n Lockit lets you lock selected apps on your device so only you can access them. Whether it's social media, messages, photos, or banking apps, you stay in control of your privacy. With a simple and clean interface, Lockit makes it easy to choose which apps you want to protect and secure them with a PIN code.",
+            "tech": [
+                "Jetpack Compose",
+                "Koin",
+                "AccessibilityService",
+                "DataStore",
+                "MVVM"
+            ],
+            "screenshots": [
+                "https://play-lh.googleusercontent.com/_QQi0W44IijhPuDtrFwI6eiC-aRDyaW5ItaLkcME0fEeFG7rt3beCZ48e8_75BfjzFadM0FBZ_hU0uiRIObn=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/Vgd5PdbgnmnBInw5_-IdGy-45HZ0ms84exzoLbmwZW9b-leNRm8d_Wk0O-wu_5b5yIkqaS4FxZzNS0SfS9D7m_M=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/-z26BCUqcD_m7DD_ce-TskWoBjGqeqSizwUzOWEhfKlw6Y3lZW6nnn-OSFq2UKxrSvCcfp00Y-Fcc9bjrJWEcg=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/AZwZb_kzg_5FRaqlicOBCn8Jjq8MmMH3nGHRXJRJb1M6vQ6u5hIMb6Y_Raya56ABFnRo6pC89ZncAbSMhuURyg=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/h3rP05r6NVhXW6wti_mkNlTCdu2s8V5ET2aP7GTC9Gq90tOoGtIdvx9soISCmlrN0gc5zoxSvMLGmMmiPbo2=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/qbqOn7Wkt-_KJB46O9dQHnieqxKgs6Rhu4Q3IewV_KdrGrdRe0fv5JKsCYgpduSucS_kgxbsPPtXTGvmwWsJ=w5120-h2880-rw"
+            ]
+        }
+    ]
 }

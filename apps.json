@@ -39,7 +39,7 @@
             "name": "Color Battle",
             "packageId": "io.edenxwhistle.fingerchallenge",
             "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenxwhistle.fingerchallenge",
-            "icon": "https://play-lh.googleusercontent.com/nny8UPjtNtaRvwAo4T0ZE-OSYKqzA-IKwpEcEBcjY1caYo6B8IAKjTSPdCxZw-21Zy-_I7q39Na6e9qTwHfwGg=w480-h960-rw",
+            "icon": "https://play-lh.googleusercontent.com/KD2UfuOLd59iZWeNOHPsybdrHrX5IzebaHn64kRnYG-760s_W3Lr-62Zoib_PS-qiRkNzvtxwDX_INLdFr4C=w480-h960-rw",
             "description": "A mini game to train how your thought control your fingers. Just try it out. You might love it!",
             "tech": [
                 "Jetpack Compose",
@@ -50,9 +50,12 @@
                 "MVI"
             ],
             "screenshots": [
-                "https://play-lh.googleusercontent.com/ue7dIGDfzA9YvTSBhQ4dJ3aJWxBYbl1gJenLpBrwe5nJDEsjUhYrEsWRdTxp-3aOSA=w1052-h592-rw",
-                "https://play-lh.googleusercontent.com/PwefBIrqJiJUrO85SJvZx-_RI3_S6ZA7LE971W-uPPwYd8zep3yOLpiPZxKnbD450A=w1052-h592-rw",
-                "https://play-lh.googleusercontent.com/gkcInlTLV2F95B8cjsS9hoI_Ekjm3on5biDP3o5yc0R7IuOoywidhKgDGpMNDY5YRA=w1052-h592-rw"
+                "https://play-lh.googleusercontent.com/CqThniQlnok8-a3PfmGYPTMTRJwmL6RhR83_XCQjQ4EBxvLKEY6uB__r1lYo8gWYVNwiSIGzLsmH-frAn1H6lw=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/vPlEROmT6TMGiLz7O-A3qc-G3p_80dQAxboTlGSSl5hrREU2OOSewz76291Pv2jRKv6Yhf1ME4hUrsmcUA9m=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/Y18lsmRbzjNGJn5OKzfdO2Elqd2shHE8E9DvHHrzUoWrMgbxsItHeMLdlb7Mbl5r3ThHbRaTuPvCtRUCkNVFYw=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/oUry_k6wXwo_8IOV0NqWhR7Gi9wbfLprXTHS1eNIwGAIpapK-7YLUq8iouSxBzJ3IxbDg33YPPVaWVgVA1vHOGA=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/7liZxg1Yirlhi-2F7iGdIrzFfNPIThejKdhD3cb_uO7Y5pRWfCWHtwTKTxP_tInC1BT-5yC4oeYneAnyoTVvyQ=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/3DRL_KDNytmQTfavjSlgqzTVjdqFVNOKgEosGz5HiJkfK-N8CnlMrcT-WCht6nmF045-7lZTCprEtlThraI81us=w5120-h2880-rw"
             ]
         },
         {

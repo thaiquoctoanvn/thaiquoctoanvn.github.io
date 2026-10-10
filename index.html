@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Apps · Portfolio</title>
+<title>Toan Thai | Android Developer</title>
 <meta name="description" content="Android apps I have designed, built and shipped.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%232F5BFF%22%2F%3E%3Cpath%20d%3D%22M12%2044a20%2020%200%200%201%2040%200z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23000%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20d%3D%22M20%2022l-5-8M44%2022l5-8%22%20stroke%3D%22%23000%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22square%22%2F%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2235%22%20r%3D%223%22%20fill%3D%22%23000%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2235%22%20r%3D%223%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -396,7 +396,7 @@ function renderPage(){
   const {profile:P, apps} = DATA;
   const L = P.links || {};
   const name = P.name || 'Portfolio';
-  document.title = `${name} · Apps`;
+  document.title = 'Toan Thai | Android Developer';
   const onPlay = apps.filter(a=>/play\.google\.com/.test(a.url)).length;
   const dl = apps.reduce((s,a)=>s+parseDl(a.downloads),0);
   const stats = [[String(apps.length).padStart(2,'0'), apps.length===1?'App shipped':'Apps shipped']];

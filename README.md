@@ -32,6 +32,20 @@ Edit `apps.json`, then commit and push. No code changes needed.
 
 Optional fields: `tagline`, `category`, `downloads`, `rating`, `released`, `role`. `featured: true` pins the app first.
 
+## App detail page
+
+Each app has its own page at `#/app/<slug>` (for example `#/app/qik-font`). Clicking a card opens it, and Back returns to the home page at the same scroll position without re-rendering it. The slug comes from `name`; set `slug` to override it.
+
+The detail page shows only the sections that have content. These optional fields fill it in:
+
+```json
+"overview": "Longer write-up. Separate paragraphs with a blank line (\n\n). Falls back to description.",
+"features": ["Feature one", "Feature two"],
+"architecture": "How the app is structured.",
+"challenges": [{ "title": "Problem", "detail": "How I solved it." }],
+"links": { "github": "https://...", "website": "https://...", "privacy": "https://..." }
+```
+
 ## Run locally
 
 ```sh

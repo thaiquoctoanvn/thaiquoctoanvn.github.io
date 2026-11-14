@@ -1,10 +1,10 @@
 {
     "profile": {
         "name": "Toan Thai",
-        "title": "Android Developer",
+        "title": "Mobile Developer",
         "bio": "Android Developer with ~5 years of experience building and maintaining native apps in Kotlin and Java. Focused on Jetpack Compose, Clean Architecture, Coroutines/Flow and offline-first design, with AI tools in my daily workflow.",
         "location": "Ho Chi Minh City, Vietnam",
-        "avatar": "avatar.jpg",
+        "avatar": "avatar.svg",
         "links": {
             "playDeveloper": "https://play.google.com/store/apps/dev?id=5665599142697779691",
             "github": "https://github.com/thaiquoctoanvn",

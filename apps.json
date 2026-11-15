@@ -18,8 +18,22 @@
             "featured": true,
             "packageId": "io.edenx.qikfont",
             "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenx.qikfont",
-            "icon": "https://play-lh.googleusercontent.com/zwfEpresftzz3PlX4nawK6IoDwK3kaNCkthkUqK5BrzRC5CICcYmunCws5gp9ctjQDGgfEAc7GbskBbnqjqOKw=w480-h960-rw",
-            "description": "Unleash the full potential of your creative expression with Qik Font, the definitive app designed for typography lovers and professional designers alike. Dive into the world of fonts, styles, and artistic text with an app that transforms your mobile device into a powerful typography studio.",
+            "icon": "https://play-lh.googleusercontent.com/7FD-Mk48rqc3rYr6-JbmtcQ3wt1BALkACQv6kw_KiMtIDEQCTg6X861aNdOnIIX_EixoAv9_wOJWl4p8l6Xz-o0=w480-h960-rw",
+            "tagline": "Add stylish text to your photos with beautiful fonts, colors and backgrounds.",
+            "category": "Art & Design",
+            "description": "Turn any photo into eye-catching typography with Qik Font. Pick a picture, add your words and style them in seconds – right on your phone.\n\nPerfect for quotes, social media posts, stories, wallpapers, greetings and anything else you want to say with style.",
+            "features": [
+                "Add as many texts as you like to any photo",
+                "Choose from a collection of beautiful fonts",
+                "Customize text color, background and alignment",
+                "Pinch to zoom and rotate text with two fingers, drag to place it anywhere",
+                "Adjust and fit your photo on a full-screen canvas",
+                "Find, edit or remove texts quickly from the text list",
+                "Save your projects as drafts and continue later",
+                "Export your design and share it straight to your favorite apps",
+                "Clean glass-style design with Light, Dark or System theme",
+                "Quick tips and a step-by-step guide to get you started"
+            ],
             "tech": [
                 "Jetpack Compose",
                 "Room",
@@ -29,10 +43,12 @@
                 "MVVM"
             ],
             "screenshots": [
-                "https://play-lh.googleusercontent.com/F26VU_pvV44-jR3x-Y8tp-RF2pad8dNayRmNBInkRpZvSbK6Xa2HwaKBaLtT1mj_sgdi2wqRPNRG6LdyVTMlLhM=w5120-h2880-rw",
-                "https://play-lh.googleusercontent.com/E7NMPWeysHUY5A8bNtpR-HgbF5-8owKKT7FB-sYLXnAXKyF9JCDhLtb65Hp25jiXFGAfq62HG2jQ5Nt0NHezXEo=w5120-h2880-rw",
-                "https://play-lh.googleusercontent.com/k7-LW2Deb209KVkoZ2ZK0Kx3Ki26i4ln56eOOwJrIOU4mns8Tlye3o4aMwJgAfRHK8OiuL1PymvWV5LgtiLJbjM=w5120-h2880-rw",
-                "https://play-lh.googleusercontent.com/wx3cwTrh1NPznFsQhOkLL2B9XE9plNiKM8wbluvIjUM9IglvG1e7L-_mSaJI9eJqXVELTBVq6rq7wTcWC84Czw=w5120-h2880-rw"
+                "https://play-lh.googleusercontent.com/m9FD9jmAwALeLcLhkMfd97fmHWBMurE_pk-zmoQZMyUCuY99hHcsBrBqWlRN9FxaEyXMQHuuqDNBKVYYORTP=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/XjrlqiuYNu-xR1MF4PwAIr2P_VnFnPWKB3sN9Kn6RT5ZXTGeR96MTtbtdalJXzWqq-vm1bJDtFI_fIIDFcLhmg=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/8kctrGFYg3Ajhbf_FtRCVekThGK7rXru4dl9RhubrmdfkZdfa5ypTbq56UeUgrGXld09PySKBG07yfHUoR_KtA=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/z1SsjTvIFnGk7JaiCrJy06CzWDuaPsUcsJQcRKirgA84sPd2NXyzffdaVdtqtKMbgM-tglrvLu7JpzNRyOUmUQ=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/UUbmrDe7DTj3owVVpVNkIS0ucZoIAnE8vFI9tiZBnUNSSdOEyWCzIeVZvgUFczfKNMvU6KDRBit4mdEruJDsdY8=w5120-h2880-rw",
+                "https://play-lh.googleusercontent.com/xf3nWFtzS_QLc5C_MhzFo3_J5k6ebaWj0OhiCDaJKjmldL0ymCKLo8BJOLbMk9AeieBnv58Oez71MhA0mLe4=w5120-h2880-rw"
             ]
         },
         {
@@ -40,7 +56,21 @@
             "packageId": "io.edenxwhistle.fingerchallenge",
             "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenxwhistle.fingerchallenge",
             "icon": "https://play-lh.googleusercontent.com/KD2UfuOLd59iZWeNOHPsybdrHrX5IzebaHn64kRnYG-760s_W3Lr-62Zoib_PS-qiRkNzvtxwDX_INLdFr4C=w480-h960-rw",
-            "description": "A mini game to train how your thought control your fingers. Just try it out. You might love it!",
+            "tagline": "Read the word, not the ink! A fast, fun brain game to test your reflexes.",
+            "category": "Board game",
+            "description": "The word says BLUE… but it's painted red. Which tile do you tap?\n\nColor Battle is a quick, colorful brain game that tests your focus and reflexes. Read the WORD, ignore the ink, and tap the matching color before the fuse burns out. It sounds easy. Your brain will disagree!",
+            "features": [
+                "Tap the tile that matches what the word SAYS, not the color it is painted in",
+                "Only a few seconds per question and 3 hearts per game",
+                "Combo multiplier up to x5, best scores and up to 3 stars on each level",
+                "3 levels: Easy (2×2, 4 colors), Medium (3×3, 9 colors) and Hard (4×4, all 16 colors)",
+                "A new Daily Challenge with bonus XP every day, plus daily streak rewards",
+                "Level up with XP and unlock new colors",
+                "Collect all 16 color stickers, from Common to Epic, and unlock 9 awards",
+                "Color-blind mode, reduce-motion option and dark mode",
+                "Music, sound effects and haptics you can switch on or off",
+                "English & Vietnamese"
+            ],
             "tech": [
                 "Jetpack Compose",
                 "Coroutines",
@@ -63,7 +93,9 @@
             "packageId": "io.edenx.applock",
             "playStoreUrl": "https://play.google.com/store/apps/details?id=io.edenx.applock",
             "icon": "https://play-lh.googleusercontent.com/c-AMBdWFw1KzyTRiVyjtQ8B3xHLTC4ncN3n2A4HTWl0qu3hP98MYFrfqPj6RpVE4s1q9hg5TSDnuV_Z6Dd6k=w480-h960-rw",
-            "description": "Protect your privacy and keep your apps secure with Lockit.\n Lockit lets you lock selected apps on your device so only you can access them. Whether it's social media, messages, photos, or banking apps, you stay in control of your privacy. With a simple and clean interface, Lockit makes it easy to choose which apps you want to protect and secure them with a PIN code.",
+            "tagline": "Protect your privacy. Lock apps with PIN and customize security easily.",
+            "category": "Lifestyle",
+            "description": "Protect your privacy and keep your apps secure with Lockit.\n\nLockit lets you lock selected apps on your device so only you can access them. Whether it’s social media, messages, photos, or banking apps, you stay in control of your privacy. With a simple and clean interface, Lockit makes it easy to choose which apps you want to protect and secure them with a PIN code.",
             "tech": [
                 "Jetpack Compose",
                 "Koin",
